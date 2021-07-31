@@ -350,6 +350,7 @@ in {
               "${pkgs.fish-foreign-env}/share/fish-foreign-env/functions"
           }
           fenv source ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh > /dev/null
+          fenv source ${pkgs.nix}/etc/profile.d/nix.sh >> /dev/null
           set -e fish_function_path[1]
 
           ${cfg.shellInit}
